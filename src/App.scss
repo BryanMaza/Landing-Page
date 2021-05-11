@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+@import "animations";
+@import "breakPoints";
+
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  min-height: 100vh;
+}
+.App {
+  overflow: hidden;
+}
+.header {
+  @include breakpoint-up("medium") {
+    background-image: radial-gradient(
+        circle at 19% 27%,
+        rgba(255, 255, 255, 0.01) 0%,
+        rgba(255, 255, 255, 0.01) 3%,
+        transparent 3%,
+        transparent 100%
+      ),
+      radial-gradient(
+        circle at 14% 15%,
+        rgba(255, 255, 255, 0.01) 0%,
+        rgba(255, 255, 255, 0.01) 3%,
+        transparent 3%,
+        transparent 100%
+      ),
+      radial-gradient(
+        circle at 52% 35%,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(255, 255, 255, 0.03) 3%,
+        transparent 3%,
+        transparent 100%
+      ),
+      radial-gradient(
+        circle at 52% 35%,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(255, 255, 255, 0.03) 3%,
+        transparent 3%,
+        transparent 100%
+      ),
+      radial-gradient(
+        circle at 57% 90%,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(255, 255, 255, 0.03) 3%,
+        transparent 3%,
+        transparent 100%
+      ),
+      radial-gradient(
+        circle at 21% 88%,
+        rgba(255, 255, 255, 0.01) 0%,
+        rgba(255, 255, 255, 0.01) 7%,
+        transparent 7%,
+        transparent 100%
+      ),
+      radial-gradient(
+        circle at 15% 0%,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(255, 255, 255, 0.03) 7%,
+        transparent 7%,
+        transparent 100%
+      ),
+      radial-gradient(
+        circle at 0% 66%,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(255, 255, 255, 0.03) 7%,
+        transparent 7%,
+        transparent 100%
+      ),
+      radial-gradient(
+        circle at 41% 50%,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(255, 255, 255, 0.03) 7%,
+        transparent 7%,
+        transparent 100%
+      ),
+      radial-gradient(
+        circle at 61% 49%,
+        rgba(255, 255, 255, 0.02) 0%,
+        rgba(255, 255, 255, 0.02) 7%,
+        transparent 7%,
+        transparent 100%
+      ),
+      radial-gradient(
+        circle at 62% 81%,
+        rgba(255, 255, 255, 0.01) 0%,
+        rgba(255, 255, 255, 0.01) 7%,
+        transparent 7%,
+        transparent 100%
+      ),
+      radial-gradient(
+        circle at 20% 47%,
+        rgba(255, 255, 255, 0.02) 0%,
+        rgba(255, 255, 255, 0.02) 7%,
+        transparent 7%,
+        transparent 100%
+      ),
+      radial-gradient(
+        circle at 26% 82%,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(255, 255, 255, 0.03) 5%,
+        transparent 5%,
+        transparent 100%
+      ),
+      radial-gradient(
+        circle at 46% 9%,
+        rgba(255, 255, 255, 0.01) 0%,
+        rgba(255, 255, 255, 0.01) 5%,
+        transparent 5%,
+        transparent 100%
+      ),
+      radial-gradient(
+        circle at 47% 6%,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(255, 255, 255, 0.03) 5%,
+        transparent 5%,
+        transparent 100%
+      ),
+      radial-gradient(
+        circle at 43% 28%,
+        rgba(255, 255, 255, 0.02) 0%,
+        rgba(255, 255, 255, 0.02) 5%,
+        transparent 5%,
+        transparent 100%
+      ),
+      radial-gradient(
+        circle at 67% 100%,
+        rgba(255, 255, 255, 0.01) 0%,
+        rgba(255, 255, 255, 0.01) 5%,
+        transparent 5%,
+        transparent 100%
+      ),
+      linear-gradient(393deg, rgb(232, 69, 69), rgb(43, 46, 74));
+  }
+}
+
+.btn {
+  background-color: #e84545;
+  padding: 0.5rem 1.875rem;
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  font-style: normal;
+  outline: none;
+  position: relative;
+  transition: all 200ms linear;
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: 2px 2px 20px #e8454567;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.205);
+    opacity: 0;
+  }
+  &:active::before {
+    opacity: 1;
+  }
+
+  @include breakpoint-up("small") {
+    padding: 0.6rem 2rem;
+    font-size: 0.875rem;
+  }
+  @include breakpoint-up("medium") {
+    font-size: 1rem;
+    cursor: pointer;
+  }
+}
+.dark {
+  background-color: #2b2e4a;
+  color: white;
+}

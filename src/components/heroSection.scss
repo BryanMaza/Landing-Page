@@ -1,0 +1,124 @@
+@import "../breakPoints";
+
+.hero-section {
+  padding: 0 2.6875rem;
+  overflow: hidden;
+  background-color: transparent;
+  @include breakpoint-up("medium") {
+    display: flex;
+  }
+  @include breakpoint-up("large") {
+    padding: 0 8rem;
+  }
+
+  .hero-info {
+    margin-bottom: 1rem;
+    @include breakpoint-up("medium") {
+      flex: 1;
+    }
+    @include breakpoint-up("large") {
+      max-width: 36.75rem;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 1.875rem;
+      margin-bottom: 0.81rem;
+      text-transform: uppercase;
+      transition: all 200ms;
+      color: #2b2e4a;
+      @include breakpoint-up("small") {
+        font-size: 2.5rem;
+      }
+    }
+    p {
+      font-size: 0.75rem;
+      text-align: center;
+      color: #7e7d7d;
+      margin: 1.5625rem auto;
+      display: block;
+      width: 18.125rem;
+      transition: all 300ms;
+      @include breakpoint-up("small") {
+        width: 50%;
+        font-size: 1rem;
+      }
+      @include breakpoint-up("medium") {
+        width: 70%;
+        color: rgb(221, 219, 219);
+      }
+      @include breakpoint-up("large") {
+        text-align: left;
+      }
+    }
+    button {
+      margin: 0 auto;
+      display: block;
+
+      @include breakpoint-up("medium") {
+        background-color: transparent;
+        border: 1px solid white;
+        color: #ffffffe1;
+      }
+    }
+  }
+  .img-container {
+    position: relative;
+    @include breakpoint-up("medium") {
+      flex: 1;
+    }
+
+    .star,
+    .planet {
+      position: absolute;
+      transition: all 300ms ease;
+    }
+
+    .planet {
+      top: 22%;
+      left: 25%;
+      width: 3rem;
+      height: 2rem;
+      animation: rebound 3.2s ease-out infinite;
+      @include breakpoint-up("small") {
+        width: 4rem;
+        height: 2.8rem;
+        top: 16%;
+        left: 30%;
+      }
+      @include breakpoint-up("large") {
+        top: 12%;
+        left: 35%;
+      }
+    }
+    .star {
+      right: 28%;
+      top: 15%;
+      width: 2rem;
+      height: 2rem;
+      animation: rotate 4.5s linear infinite;
+      @include breakpoint-up("medium") {
+        right: 20%;
+      }
+      @include breakpoint-up("large") {
+        right: 30%;
+      }
+    }
+
+    img {
+      transition: all 300ms ease;
+      width: 100%;
+      height: 15.5625rem;
+      object-fit: cover;
+      animation: slide-left 0.8s ease forwards;
+      @include breakpoint-up("small") {
+        height: 22.5625rem;
+      }
+
+      @include breakpoint-up("large") {
+        height: 25.6rem;
+        object-fit: contain;
+      }
+    }
+  }
+}

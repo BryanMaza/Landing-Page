@@ -1,0 +1,45 @@
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translate3d(5.25rem, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+@keyframes rebound {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translate3d(0, -1.5rem, 0);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes show-menu {
+  0% {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  1% {
+    height: auto;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
